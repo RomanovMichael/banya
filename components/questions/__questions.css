@@ -1,30 +1,22 @@
 .questions {
-    -webkit-backdrop-filter: blur(10px); 
-	backdrop-filter: blur(10px);
     padding-top: 5rem;
     padding-bottom: 4.5rem;
-    /* padding-left: 8.25rem; */
-    /* padding-right: 8.25rem; */
-    /* background-color: gray; */
-    /* background-color: transparent; */
-    background: rgba(255, 255, 255,.025);
     border-radius: 3.5rem;
-    border: 1px solid #4d4d4d;
     margin-top: 9rem;
 }
 
+.questions__container  {
+    flex-wrap: nowrap;
+    width: 100%;
+    gap: 2rem;
+}
+
 .questions__title {
-    /* font-size: 2.5rem; */
-    /* line-height: 3rem; */
     font-size: 1.5rem;
     line-height: 2rem;
     text-transform: uppercase;
-    /* font-weight: 500; */
 }
 
-.questions__container { 
-    max-width: 85% !important;
-}
 
 .questions__head {
     text-align: center;
@@ -40,7 +32,7 @@
 }
 
 .questions__list {
-    /* grid-template-columns: 1fr 1fr; */
+    flex: 1;
     grid-column-gap: 1.5rem;
     filter: drop-shadow(0rem 0.75rem 3.5rem rgba(0, 0, 0, 0.06));
 }
@@ -199,11 +191,7 @@
     .questions {
         padding-bottom: 0;
         padding-top: 1.5rem;
-        /* width: calc(100% + 2rem); */
-        /* margin-left: -1rem; */
-        /* margin-right: -1rem;  */
         margin-top: 4.5rem !important;
-        /* padding:  unset !important; */
         border: none;
         background:none;
         background-color: transparent;
@@ -212,11 +200,7 @@
     }
 
     .questions__container {
-        -webkit-backdrop-filter: blur(10px); 
-        backdrop-filter: blur(10px);
-        background: rgba(255, 255, 255,.025);
         border-radius: 3.5rem;
-        border: 1px solid #4d4d4d;
         padding-top: 1.5rem !important;
         padding-left: 1.668rem !important; 
         padding-right: 1.668rem !important;
@@ -249,17 +233,6 @@
         padding-left: 1.34rem !important;
     }
 
-    /* .questions__title::after  { 
-        position: relative;
-        display: inline-block;
-        content: '';
-        left: 0.5rem;
-        width: 0;
-        height: 0;
-        border: 0.35rem solid transparent;
-        border-bottom: 0.35rem solid red;
-        border-right: 0.35rem solid red;
-    } */
 
     .questions__item-btn {
         margin-left: 1rem;
@@ -302,18 +275,6 @@
         font-size: 1.17rem;
         line-height: 1.668rem;
     } 
-
-    /* .questions__title::after { 
-        position: relative;
-        display: inline-block;
-        content: '';
-        left: 0.3rem;
-        width: 0;
-        height: 0;
-        border: 0.255rem solid transparent;
-        border-bottom: 0.255rem solid red;
-        border-right: 0.255rem solid red;
-    }  */
     
     .questions__subtitle { 
         font-size: 1.17rem;

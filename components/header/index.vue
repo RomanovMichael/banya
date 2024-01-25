@@ -1,51 +1,7 @@
 <template>
   <header class="header">
     <div
-      class="center-wrap header__container flex --align-center --just-space --desk"
-    >
-      <div class="header__side --left">
-        <h1 class="header__logo">
-          <a class="header__logo-link" href="#">Natalee.Romanova</a>
-        </h1>
-      </div>
-      <div class="header__side --center">
-        <nav class="header__nav">
-          <ul class="header__nav-list flex --align-center --gap-16">
-            <li>
-              <a
-                class="header__nav-item"
-                href="#"
-                @click.prevent="scrollTo('products')"
-                >Услуги и цены</a
-              >
-            </li>
-            <li>
-              <a
-                class="header__nav-item"
-                href="#"
-                @click.prevent="scrollTo('FAQ')"
-                >Вопрос ответ</a
-              >
-            </li>
-            <li>
-              <a
-                class="header__nav-item"
-                href="#"
-                @click.prevent="scrollTo('contacts')"
-                >Контакты</a
-              >
-            </li>
-          </ul>
-        </nav>
-      </div>
-      <div class="header__side --right">
-        <a href="tel:+79786039342" target="_blank" class="header__phone"
-          >+7 (978) 603 93 42</a
-        >
-      </div>
-    </div>
-    <div
-      class="center-wrap header__container flex --align-center --just-space --mob"
+      class="header__container center-wrap py-32 flex --align-center --just-space"
     >
       <div class="header__burger-wrap">
         <div
@@ -59,9 +15,32 @@
           </div>
         </div>
       </div>
-                <h1 class="header__logo">
-          <a class="header__logo-link" href="#">Natalee.Romanova</a>
-        </h1>
+      <nav class="header__nav">
+        <ul class="header__nav-list flex --align-center --gap-24">
+          <li class="header__nav-item">
+            <a href="#" @click="scrollTo('what')"  class="header__nav-link">What is a Banya</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="#" @click="scrollTo('prices')" class="header__nav-link">Prices</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="#" @click="scrollTo('about')"  class="header__nav-link">About me</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="#" @click="scrollTo('mission')" class="header__nav-link">Mission</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="#" @click="scrollTo('road')" class="header__nav-link">Road</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="#" @click="scrollTo('contacts')" class="header__nav-link">Contacts</a>
+          </li>
+        </ul>
+      </nav>
+      <a href="#" class="header__logo flex --align-center --gap-8">
+        <LogoSvg class="header__logo-icon" />
+      </a>
+      <a href="#" class="header__order --desk btn">Appointment</a>
     </div>
     <transition
       v-on:before-enter="beforeEnter"
@@ -75,17 +54,22 @@
 </template>
 
 <script>
+import LogoSvg from "~/assets/img/svg/logo.svg?inline";
 
 export default {
+  components: { LogoSvg },
+
   methods: {
-    animationFade(selector, delay) {
-      const gsap = this.$gsap;
-      gsap.from(selector, {
-        delay: delay,
-        duration: 2,
-        opacity: 0,
-        ease: "power4.out",
-      });
+    scrollTo(id) {
+      let timeOut = this.$route.name !== this.path ? 500 : 50;
+
+      setTimeout(() => {
+        this.$gsap.to(window, { duration: 0.56, scrollTo: "#" + id });
+      }, timeOut);
+
+      document.querySelector("body").classList.remove("js-no-scroll");
+
+      this.openMenu(false);
     },
     showOnScrollUp() {
       const gsap = this.$gsap;
@@ -95,7 +79,7 @@ export default {
         .from(header, {
           yPercent: -200,
           paused: true,
-          duration: 0.3,
+          duration: 0.2,
         })
         .progress(1);
 
@@ -157,15 +141,6 @@ export default {
         onComplete: done,
       });
     },
-    scrollTo(id) {
-      // let timeOut = this.$route.name !== this.path ? 500 : 50;
-      let timeOut = 50;
-      setTimeout(() => {
-        this.$gsap.to(window, { duration: 0.56, scrollTo: "#" + id });
-      }, timeOut);
-      document.querySelector("body").classList.remove("js-no-scroll");
-      this.openMenu(false);
-    },
   },
   watch: {
     $route(to, from) {
@@ -178,11 +153,7 @@ export default {
   },
   async mounted() {
     this.$gsap.delayedCall(0.01, this.showOnScrollUp);
-    this.animationFade(".header__logo", 5.7);
-    this.animationFade(".header__nav", 5.7);
-    this.animationFade(".header__phone", 5.7);
-     this.animationFade(".header__burger-wrap", 5.7);
-    // console.log(this.$ScrollTrigger);
+    console.log(this.$ScrollTrigger);
   },
 };
 </script>

@@ -1,24 +1,34 @@
 <template>
   <div class="preloader flex --align-center --just-center">
     <div class="preloader__title-wrap">
-      <div class="preloader__title">NATALEE ROMANOVA</div>
-      <div class="preloader__subtitle">permanent make up</div>
-      <div class="preloader__line"></div>
+      <!-- <div class="preloader__title">NATALEE ROMANOVA</div> -->
+      <div class="preloader__subtitle">A Banya is a process of deep cleansing of the soul and body in combination with massage, aromatherapy and meditation.<br><br> This is the way to calm down, relax and purify.</div>
     </div>
-    <div class="preloader__percents">
+    <!-- <div class="preloader__percents">
         <span id="percents">0</span> %
+    </div> -->
+    <div class="preloader__shade">
+      <div class="preloader__bg">
+          <nuxt-picture
+            preload="true"
+            quality="100"
+            class="lazy hello__bg-thumb image-thumb"
+            sizes="sm:641px, md:641px, lg:641px"
+            format="webp"
+            src="/preloader/prel.png"
+            alt="Banya of Sanya background image"
+          />
+      </div>
     </div>
-    <div class="preloader__shade"></div>
   </div>
 </template>
 <style>
 @import "@/components/preloader/preloader.css";
 </style>
 <script>
-import SVGLogo from "~/assets/img/ui/logo-preloader-1.svg?inline";
+
 export default {
   components: {
-    SVGLogo,
   },
   methods: {
     animationFadeIn(selector, delay) {
@@ -38,31 +48,6 @@ export default {
         opacity: 0,
         ease: "power4.out",
       });
-    },
-    splitText() {
-      const tl = this.$gsap.timeline();
-
-      tl.to(".preloader__title", {
-        delay: 1,
-        duration: 0.375,
-        yPercent: -100,
-        ease: "power4.out",
-      }).fromTo(
-        ".preloader__subtitle",
-        {
-          duration: 1,
-          yPercent: 100,
-        },
-        {
-          yPercent: -100,
-        },
-        1.1
-      );
-      // .to('.preloader__title-wrap', {
-      //     xPercent: -13,
-      //     delay: 1,
-      //     duration: 1.125
-      // })
     },
     fade() {
       this.$gsap.timeline().to(".preloader", {
@@ -94,11 +79,8 @@ export default {
     document.querySelector("body").classList.add("js-no-scroll");
   },
   mounted() {
-    this.preloaderProgress();
-    this.splitText();
-    // this.animationFadeIn('.preloader__bounce', 1.3)
-    // this.animationFadeOut('.preloader__bounce', 3.5)
-    this.fade();
+    // this.preloaderProgress();
+    // this.fade();
   },
 };
 </script>

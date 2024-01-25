@@ -1,9 +1,9 @@
 <template>
     <div class="questions tile--gray center-wrap flex --just-center tile" id="FAQ">
-        <div class="questions__container col --12">
             <div class="questions__head">
-                <div class="questions__title section-title">Часто задаваемые вопросы</div>
+                <div class="questions__title">How is the steaming procedure going?</div>
             </div>
+        <div class="questions__container flex --just-space">
             <div class="questions__list grid">
                 <div class="questions__list-col --left">
                     <div :class="{'is-open' : isOpen.includes(item.id)}" class="questions__item tile-min tile" v-for="(item, index) in questions.leftColQuestionsArr" :key="index">
@@ -26,23 +26,18 @@
                         </div>
                     </div>
                 </div>
-                <div class="questions__list-col --right">
-                    <!-- <div :class="{'is-open' : isOpen.includes(item.id)}" class="questions__item tile-min tile" v-for="(item, index) in questions.rightColQuestionsArr" :key="index">
-                        <div v-on:click="openMenu(item.id)" class="questions__item-clicker flex --just-space --align-center">
-                            <div class="questions__item-text col --auto" v-if="item.question" v-html="item.question"></div>
-                            <div class="questions__item-btn"></div>
-                        </div>
-                        <div class="questions__item-dropdown">
-                            <div class="questions__item-dropdown-inner p --l" v-if="item.answer" v-html="item.answer"></div>
-                        </div>
-                    </div> -->
-                    <!-- <div class="questions__lastitem-wrap flex --align-center --just-stretch">
-                        <div class="questions__lastitem flex --just-space --align-center">
-                            <div class="questions__lastitem-title"><span>У вас есть вопрос,</span> ответ на который вы не нашли у нас на сайте?</div>
-                            <div v-on:click="openPopup('callback')"  class="questions__lastitem-btn btn --fill-1">Задать вопрос</div>
-                        </div>
-                    </div> -->
-                </div>
+            </div>
+
+            <div class="questions__preview col --6">
+                <nuxt-picture
+                    preload="true"
+                    quality="100"
+                    class="lazy about__image-thumb image-thumb"
+                    sizes="sm:641px, md:641px, lg:641px"
+                    format="webp"
+                    src="/about/about.png"
+                    alt="About Banya of Sanya"
+                />
             </div>
         </div>
     </div>
@@ -58,32 +53,48 @@
                     leftColQuestionsArr: [
                         {
                             id: 1,
-                            question: 'Сколько длится процедура?',
-                            answer: 'В среднем, процедура длится 1,5  часа.'
+                            question: 'Getting to know each other + warming up',
+                            answer: 'The temperature in the Bath is just 122 F. We are sitting comfortably and warming up. We breathe the fresh frosty air from the open windows. We drink tea, get acquainted, and discuss what will happen.'
                         },
                         {   
                             id: 2,
-                            question: 'Как готовиться к процедуре?',
-                            answer: 'Современный перманентный макияж не требует от вас какой-то особенной предварительной подготовки. Необходимо лишь учитывать ваши индивидуальные противопоказания, которые необходимо обсудить с мастером до начала процедуры.'
+                            question: 'The first steam',
+                            answer: 'Mint-anise steam with juniper. Sprinkling and light steaming'
                         },
                         {   
                             id: 3,
-                            question: 'Сколько держится пигмент?',
-                            answer: 'Эффект напыления может сохраняется до полутора-двух лет. Качественно нанесенный пигмент исчезает незаметно и равномерно, без каких-либо пятен. При желании через 7 - 9 месяцев вы можете повторить процедуру. Особенности вашего организма и образ жизни – два основных фактора, влияющие на длительность сохранности перманента, тут все очень индивидуально.'
-                        }                    
-                    ],
-                    rightColQuestionsArr: [
-                        {   
-                            id: 4,
-                            question: 'Как долго продолжается процесс заживления?',
-                            answer: 'Процесс заживления длится примерно неделю, далее в течении месяца пигмент проявляется и стабилизируется, полностью конечный результат будет виден, примерно, спустя месяц после коррекции.'
+                            question: 'Concentrated steam',
+                            answer: 'Accentuated soaring of the legs with oak brooms. The contrast of the icy sheet and the cooling of the head with mint water. Active hot steaming with oak brooms. The contrast in the icy cold pluche is 8°C.'
                         },
                         {   
+                            id: 4,
+                            question: 'Rest on the couch. Tea. ',
+                            answer: 'You will take a 15 minutes rest and even will try to have a nep '
+                        },                
+                        {   
+                            id: 4,
+                            question: 'Rest on the couch. Tea. ',
+                            answer: 'You will take a 15 minutes rest and even will try to have a nep '
+                        },                  
+                        {   
+                            id: 4,
+                            question: 'Rest on the couch. Tea. ',
+                            answer: 'You will take a 15 minutes rest and even will try to have a nep '
+                        },               
+                        {   
                             id: 5,
-                            question: 'Если ли какие-нибудь противопоказания?',
-                            answer: '- беременность и период вскармливания грудью,<br> - онкология,<br> - острые воспалительные процессы в организме,<br> - низкий уровень свёртываемости крови,<br> - предрасположенность к образованию рубцов, <br> - cахарный диабет с инсулиновой зависимостью.'
-                        }
-                    ]
+                            question: 'Broom steaming with juniper and reheating on a sharp steam with oak veniks',
+                        },               
+                        {   
+                            id: 6,
+                            question: 'Scrubs (optional)',
+                            answer: 'Steam inhalation on baked potatoes with garlic and dill. Warming up with fans in wormwood steam.'
+                        },            
+                        {   
+                            id: 7,
+                            question: 'Farewell to tears',
+                        },                      
+                    ],
                 }
             }
         },

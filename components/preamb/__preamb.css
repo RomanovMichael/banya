@@ -1,0 +1,37 @@
+
+.preamb__content {
+    max-width: 70%;
+}
+
+.preamb__title {
+    text-align: center;
+    font-size: 3rem;
+    line-height: 3.5rem;
+    color: var(--color__white);
+    font-weight: 700;
+}
+
+.preamb__block {
+    font-weight: 600;
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 2rem;
+
+}
+
+.preamb__block.--green {
+    color: var(--color__fill-2);
+}
+
+
+@media screen and (max-width:991px) {
+    .preamb__content {
+        max-width: unset;
+    }
+
+    .preamb__title {
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
+
+}

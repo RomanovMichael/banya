@@ -26,7 +26,6 @@
     /* transform: translateX(-50%) translateY(-50%); */
     /* left: 50%; */
     /* top: 50%; */
-    height: 2.5rem;
 }
 .preloader__logo svg {
     width: 100%;
@@ -50,12 +49,13 @@
 }
 
 .preloader__subtitle {
+    text-align: center;
     color: var(--color__dark);
     font-size: 2rem;
     line-height: 2.5rem;
     /* padding-left: 1rem; */
     /* padding-right: 1rem; */
-    text-transform: uppercase;
+
 }
 
 .preloader__subtitle span {

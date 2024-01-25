@@ -1,58 +1,43 @@
-<template>
-  <section class="about" id="about">
-    <div class="about__container center-wrap">
-      <!-- <div class="divider">
-          <div class="divider__line center-wrap"></div>
-          </div> -->
-      <div
-        class="about__content flex --align-stretch --just-space mt-80"
-      >
-        <div class="about-left flex --direction-column">
-          <div class="about__section-title">Обо мне</div>
-          <div class="about__text-wrap">
-            <p class="about__text">
-              Привет, меня зовут Натали! <br>
-              Я тренер и мастер перманентного макияжа.
-              Любящий и знающий свое дело на протяжении 5 лет.<br><br>
-              Регулярно повышаю уровень квалификации.
-              Владею самыми инновационными техниками и знаниями в области ПМ.
-              Принимаю в Москве и Симферополе. <br><br>
-              Вкладываю душу в каждую работу. Техника и вкус позволяют сделать ПМ с учетом индивидуальных характеристик внешности, выгодно подчеркивая природную красоту.<br><br>
-              Так же в моей практике множество исправлений некачественного татуажа. 
-              Помогаю избавиться от синих и розовых бровей. 
-              Со мной на процедуре не больно и уютно.
-            </p>
-          </div>
-        </div>
-        <div class="about__image-wrap">
-          <div class="about__image image-thumb">
-            <nuxt-picture
-              quality="100"
-              class="lazy"
-              sizes="sm:641px, md:641px, lg:641px"
-              format="webp"
-              src="/about/master.jpg"
-              alt="Мастер перманентного макияжа"
-            />
-          </div>
-        </div>
-      </div>
-    </div>
 
-    <div class="about__marquee ticker">
-      <div class="ticker__wrapper">
-        <div class="ticker__item">Natalee Romanova -</div>
-        <div class="ticker__item">Natalee Romanova -</div>
-        <div class="ticker__item">Natalee Romanova -</div>
-        <div class="ticker__item">Natalee Romanova -</div>
-        <div class="ticker__item">Natalee Romanova -</div>
-      </div>
-    </div>
-  </section>
+<template>
+    <section class="about" id="about">
+        <div class="about__container center-wrap">
+            <div class="about__title-wrap flex --just-center --mob">
+                <h2 class="about__title">About me</h2>
+            </div>
+            <div class="about__content flex">
+                <div class="about__text col --6">
+                    <div class="about__text-head flex mb-56">
+                        <div class="about__title-wrap  section-title-wrap --desk">
+                            <h2 class="about__title section-title">About me</h2>
+                        </div>
+                    </div>
+                    <p>My name is Sanya. </p>
+                    <p> I'm from Crimea, I've been living in Moscow for the last few years. </p>
+                    <p>After the war began, my friend Chris helped me, as a Ukrainian, with moving to the United States, where a year and a half later I decided to build a business in a Russian Bathhouse - Banya..</p>
+                    <p>It doesn't sound politically correct to most people on the planet, but I don't give a fuck. I make the product I believe in.</p>
+                </div>
+                <div class="about__image col --6">
+                    <nuxt-picture
+                        quality="100"
+                        class="lazy about__image-thumb image-thumb"
+                        sizes="sm:641px, md:641px, lg:641px"
+                        format="webp"
+                        src="/about/about.png"
+                        alt="About Banya of Sanya"
+                    />
+                </div>
+            </div>
+        </div>
+    </section>
 </template>
 
 <script>
-export default {};
+export default {
+    
+}
 </script>
+
+
 
 <style src="~/components/about/__about.css" lang="css"></style>

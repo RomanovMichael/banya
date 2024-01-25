@@ -1,23 +1,18 @@
 <template>
     <div class="page page-home">
+        <Header/>
         <Hello/>
-        <About/>
-        <Products/>
-        <Questions/>
-        <Contacts/>
+        <Preamb id="what"/>
+        <Procedure/>
+        <Services id="prices"/>
+        <Mission id="mission"/>
+        <Road id="road"/>
+        <About id="about"/>
+        <Contacts id="contacts"/>
     </div>
 </template>
 
 <script>
 
-export default {
-   methods: {}
-}
+export default {}
 </script>
-
-
-<style>
-    .page-home {
-        padding-top: 9rem;
-    }
-</style>

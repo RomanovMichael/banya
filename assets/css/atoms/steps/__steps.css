@@ -1,11 +1,16 @@
 .steps {
     margin: 3rem auto;
+    display: grid;
+    /* grid-template-columns: 1fr 1fr 1fr; */
+    gap: 3.5rem;
 }
 
 .steps__step {
     margin: 0px auto;
     width: 100%;
     align-items: stretch;
+    border:  1px dashed var(--color__fill-2);
+    border-radius: 2rem;
 }
 
 .steps__numb {
@@ -20,7 +25,7 @@
     justify-content: center;
     align-items: center;
     border-radius: 3.5rem;
-    background-color: var(--color__fill-1);
+    background-color: var(--color__fill-2);
     color: white;
     font-size: 1.5rem;
     z-index: 2;
@@ -37,13 +42,27 @@
     top: 3.5px;
     z-index: 0;
     /* background-color: var(--color__fill-1); */
-    background: var(--color__fill-1);
+    background: var(--color__fill-2);
 }
 
 .steps__desc {
     flex: 1;
-    padding-left: 2.5rem;
-    padding-bottom: 1.5rem;
+    padding: 1.5rem;
+    /* padding-left: 2.5rem; */
+    /* padding-bottom: 1.5rem; */
+    /* padding-top: .5rem; */
+    
+}
+
+
+.steps__numb {
+    display: none;
+}
+
+.steps__desc h4 {
+    color: var(--color__fill-2);
+    font-weight: 700;
+
 }
 
 .steps__desc h2:first-child, .steps__desc h3:first-child, .steps__desc h4:first-child, .steps__desc h5:first-child, .steps__desc p:first-child {
@@ -62,7 +81,11 @@
 .type-editor .steps:last-child {
     margin-bottom: 0px;
 }
-
+.steps__desc p {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    color: var(--color__white);
+}
 @media screen and (max-width: 1024px) {  
 
 }
