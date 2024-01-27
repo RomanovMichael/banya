@@ -6,9 +6,10 @@
                     <transition v-on:before-enter="beforeEnterMenu" v-on:enter="enterMenu" v-on:leave="leaveMenu" v-bind:css="false">
                         <div class="center-wrap">
                             <div class="full-menu__section-link" @click="scrollTo('what')">What is a Banya</div>
+                            <div class="full-menu__section-link" @click="scrollTo('Prices')">Prices</div>
                             <div class="full-menu__section-link" @click="scrollTo('about')">About me</div>
                             <div class="full-menu__section-link" @click="scrollTo('mission')">Mission</div>
-                            <div class="full-menu__section-link" @click="scrollTo('Prices')">Prices</div>
+                            <div class="full-menu__section-link" @click="scrollTo('road')">Road</div>
                             <div class="full-menu__section-link" @click="scrollTo('contacts')">Contacts</div>
                         </div>
                     </transition>
