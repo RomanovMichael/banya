@@ -40,7 +40,7 @@
       <a href="#" @click="scrollTo('contacts')" class="header__logo flex --align-center --gap-8">
         <LogoSvg class="header__logo-icon" />
       </a>
-      <a href="https://wa.me/+79267030363?text=Hi, Sanya!" target="_blank" class="header__order --desk btn">Appointment</a>
+      <a href="https://wa.me/+18013627887?text=Hi, Sanya!" target="_blank" class="header__order --desk btn">Appointment</a>
     </div>
     <transition
       v-on:before-enter="beforeEnter"

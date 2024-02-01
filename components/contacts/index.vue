@@ -21,7 +21,7 @@
             </div>
             <div class="socials__item-title">YouTube</div>
           </a>
-          <a href="https://wa.me/+79267030363?text=Hi, Sanya!"  target="_blank" class="socials__item">
+          <a href="https://wa.me/+18013627887?text=Hi, Sanya!"  target="_blank" class="socials__item">
             <div class="socials__item-icon">
                 <WhaSvg/>
             </div>
